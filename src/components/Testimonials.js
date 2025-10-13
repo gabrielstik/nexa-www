@@ -37,7 +37,7 @@ export default function Testimonials() {
   }, [index]);
 
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 bg-white">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <L1 className="mb-8 text-center">CE QU’ILS EN PENSENT</L1>
 

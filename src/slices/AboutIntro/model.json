@@ -1,0 +1,59 @@
+{
+  "id": "about_intro",
+  "type": "SharedSlice",
+  "name": "AboutIntro",
+  "description": "About section with text + CTA and right collage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "kicker": {
+          "type": "StructuredText",
+          "config": { "label": "Kicker", "single": "paragraph" }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": { "label": "Heading", "single": "heading2" }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": { "label": "Body", "multi": "paragraph" }
+        },
+        "cta_label": { "type": "Text", "config": { "label": "CTA label" } },
+        "cta_link": {
+          "type": "Link",
+          "config": { "label": "CTA link", "select": null }
+        },
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main image",
+            "constraint": { "width": null, "height": null },
+            "thumbnails": []
+          }
+        },
+        "stat_value": {
+          "type": "Text",
+          "config": { "label": "Stat value", "placeholder": "+50 clients" }
+        },
+        "stat_text": {
+          "type": "StructuredText",
+          "config": { "label": "Stat text", "single": "paragraph" }
+        },
+        "secondary_image": {
+          "type": "Image",
+          "config": {
+            "label": "Secondary image",
+            "constraint": { "width": null, "height": null },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

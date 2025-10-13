@@ -1,0 +1,46 @@
+{
+  "id": "feature_cards",
+  "type": "SharedSlice",
+  "name": "FeatureCards",
+  "description": "Grid of cards highlighting features/values",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "section_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section heading",
+            "single": "paragraph,heading2"
+          }
+        }
+      },
+      "items": {
+        "visual": {
+          "type": "Image",
+          "config": {
+            "label": "Visual",
+            "constraint": { "width": null, "height": null },
+            "thumbnails": []
+          }
+        },
+        "pill": {
+          "type": "StructuredText",
+          "config": { "label": "Pill", "single": "paragraph" }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": { "label": "Title", "single": "paragraph" }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": { "label": "Description", "single": "paragraph" }
+        }
+      }
+    }
+  ]
+}

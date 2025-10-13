@@ -1,0 +1,46 @@
+{
+  "id": "expertise_list",
+  "type": "SharedSlice",
+  "name": "ExpertiseList",
+  "description": "Vertical list of expertise domains with black CTA",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "section_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section heading",
+            "single": "paragraph,heading2"
+          }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "StructuredText",
+          "config": { "label": "Title", "single": "paragraph" }
+        },
+        "inline_image": {
+          "type": "Image",
+          "config": {
+            "label": "Inline image",
+            "constraint": { "width": null, "height": null },
+            "thumbnails": []
+          }
+        },
+        "cta_label": {
+          "type": "Text",
+          "config": { "label": "CTA label", "placeholder": "Voir plus" }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": { "label": "CTA link", "select": null }
+        }
+      }
+    }
+  ]
+}

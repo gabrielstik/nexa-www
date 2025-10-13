@@ -1,0 +1,35 @@
+{
+  "id": "services_grid",
+  "type": "SharedSlice",
+  "name": "ServicesGrid",
+  "description": "Left heading with two-column list of services",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "kicker": {
+          "type": "StructuredText",
+          "config": { "label": "Kicker", "single": "paragraph" }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": { "label": "Heading", "single": "heading2" }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "StructuredText",
+          "config": { "label": "Title", "single": "paragraph" }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": { "label": "Description", "single": "paragraph" }
+        }
+      }
+    }
+  ]
+}

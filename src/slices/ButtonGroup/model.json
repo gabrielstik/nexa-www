@@ -1,0 +1,52 @@
+{
+  "id": "button_group",
+  "type": "SharedSlice",
+  "name": "ButtonGroup",
+  "description": "A reusable group of CTA buttons",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {},
+      "items": {
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Button label"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button link",
+            "select": null
+          }
+        },
+        "button_variant": {
+          "type": "Select",
+          "config": {
+            "label": "Button variant",
+            "options": ["primary", "secondary", "ghost", "black"],
+            "default_value": "primary"
+          }
+        },
+        "button_new_tab": {
+          "type": "Boolean",
+          "config": {
+            "label": "Open in new tab"
+          }
+        },
+        "button_show_arrow": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show arrow"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

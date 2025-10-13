@@ -13,7 +13,7 @@ function BulletRow() {
 
 export default function Services() {
   return (
-    <section className="w-full py-14">
+    <section className="w-full py-14 bg-white">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#F1F8C9] rounded-[12px] px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

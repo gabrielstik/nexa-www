@@ -2,7 +2,7 @@ import { H4, L1, P1 } from "./Text";
 
 export default function ValueProps() {
   return (
-    <section className="w-full py-14">
+    <section className="w-full py-14 bg-white">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <article className="bg-[#F1F8C9] rounded-[6px] p-6 border-black/10">

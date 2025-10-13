@@ -63,7 +63,7 @@ export default function BlogCarousel() {
   }, []);
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-16 bg-white">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-4">
           <L1>BLOG</L1>

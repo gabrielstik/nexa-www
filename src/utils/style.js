@@ -9,7 +9,8 @@ export const h2ClassName =
 export const h3ClassName =
   "font-mono text-[16px] leading-[24px] uppercase text-[#232518]";
 
-export const h4ClassName = "font-free font-[700] text-[14px] uppercase";
+export const h4ClassName =
+  "font-free font-[700] text-[14px] uppercase text-[#232518]";
 
 export const p1ClassName =
   "text-[16px] leading-[24px] lg:text-[14px] lg:leading-[20px] text-[#232518]";

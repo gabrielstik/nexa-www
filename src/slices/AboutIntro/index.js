@@ -1,6 +1,8 @@
 import CtaButton from "@/components/CtaButton";
+import { h2ClassName, h3ClassName } from "@/utils/style";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
+import { twMerge } from "tailwind-merge";
 
 export default function AboutIntro({ slice }) {
   const { primary } = slice;
@@ -14,9 +16,7 @@ export default function AboutIntro({ slice }) {
               field={primary.kicker}
               components={{
                 paragraph: ({ children }) => (
-                  <p className="text-sm tracking-[0.25em] text-black/70">
-                    {children}
-                  </p>
+                  <h3 className={h3ClassName}>{children}</h3>
                 ),
               }}
             />
@@ -26,9 +26,7 @@ export default function AboutIntro({ slice }) {
             field={primary.heading}
             components={{
               heading2: ({ children }) => (
-                <h2 className="mt-2 text-5xl leading-tight tracking-tight">
-                  {children}
-                </h2>
+                <h3 className={twMerge(h2ClassName, "mt-8")}>{children}</h3>
               ),
             }}
           />

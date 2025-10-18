@@ -8,7 +8,7 @@ const VARIANT_TO_CLASSES = {
   ghost:
     "inline-flex items-center gap-2 rounded-md text-white/80 hover:text-white px-3 py-2 font-medium",
   black:
-    "inline-flex items-center gap-2 rounded-md bg-black text-white px-5 py-3 font-medium hover:bg-black/90 transition-colors",
+    "inline-flex items-center gap-2 rounded-[4px] text-white px-[12px] py-[12px] lg:px-[25px] lg:py-[14px] font-medium bg-[#232518] hover:bg-black/90 transition-colors text-[12px]",
 };
 
 export default function CtaButton({

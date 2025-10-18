@@ -1,31 +1,10 @@
-import About from "@/components/About";
-import BlogCarousel from "@/components/BlogCarousel";
-import CtaBanner from "@/components/CtaBanner";
-import Expertises from "@/components/Expertises";
-import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
-import ValueProps from "@/components/ValueProps";
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+import { SliceZone } from "@prismicio/react";
 
-export default function Home() {
-  return (
-    <div className="">
-      <Header />
-      <main className="">
-        <Hero />
-        <ValueProps />
-        <Services />
-        <Expertises />
-        <About />
-        <Testimonials />
-        <Faq />
-        <BlogCarousel />
-        <CtaBanner />
-      </main>
-      <Footer />
-    </div>
-  );
+export default async function Home() {
+  const client = createClient();
+  const page = await client.getSingle("page_home");
+
+  return <SliceZone slices={page.data.slices} components={components} />;
 }

@@ -1,0 +1,35 @@
+{
+  "id": "blog_carousel",
+  "type": "SharedSlice",
+  "name": "BlogCarousel",
+  "description": "Horizontal carousel of blog posts via relationships",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "kicker": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Kicker",
+            "single": "paragraph"
+          }
+        }
+      },
+      "items": {
+        "post": {
+          "type": "Link",
+          "config": {
+            "label": "Post",
+            "select": "document",
+            "customtypes": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 import CtaButton from "@/components/CtaButton";
+import { h1ClassName } from "@/utils/style";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
+import { twMerge } from "tailwind-merge";
 
 export default function Hero({ slice }) {
   const { primary, items } = slice;
@@ -33,7 +35,7 @@ export default function Hero({ slice }) {
               field={primary.heading}
               components={{
                 heading1: ({ children }) => (
-                  <h1 className="text-white text-6xl sm:text-7xl tracking-tight leading-[1.1] font-medium">
+                  <h1 className={twMerge(h1ClassName, "text-white")}>
                     {children}
                   </h1>
                 ),

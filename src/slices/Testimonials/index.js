@@ -1,9 +1,11 @@
 "use client";
 
-import { L1, P1 } from "@/components/Text";
+import { L1 } from "@/components/Text";
+import { h3ClassName, p1ClassName } from "@/utils/style";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 import { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Testimonials({ slice }) {
   const { primary, items = [] } = slice;
@@ -62,7 +64,11 @@ export default function Testimonials({ slice }) {
           <div className="mb-8 text-center">
             <PrismicRichText
               field={primary.kicker}
-              components={{ paragraph: ({ children }) => <L1>{children}</L1> }}
+              components={{
+                paragraph: ({ children }) => (
+                  <h2 className={h3ClassName}>{children}</h2>
+                ),
+              }}
             />
           </div>
         ) : (
@@ -83,7 +89,7 @@ export default function Testimonials({ slice }) {
               <div
                 key={i}
                 className="shrink-0"
-                style={{ minWidth: `${slideWidth}px` }}
+                style={{ width: `${slideWidth}px` }}
               >
                 <div className="rounded-[16px] overflow-hidden shadow-sm bg-white">
                   <div className="h-[260px] md:h-[360px] bg-[#E9E7E1] flex items-center justify-center">
@@ -99,12 +105,13 @@ export default function Testimonials({ slice }) {
                       </span>
                     )}
                   </div>
+
                   <div className="bg-[#E9E7E1]/60 p-6">
                     <PrismicRichText
                       field={item.quote}
                       components={{
                         paragraph: ({ children }) => (
-                          <P1 className="text-dark-100">{children}</P1>
+                          <p className={twMerge(p1ClassName)}>{children}</p>
                         ),
                       }}
                     />
@@ -169,14 +176,14 @@ export default function Testimonials({ slice }) {
         </div>
 
         {items.length > 1 ? (
-          <div className="mt-6 flex items-center justify-center gap-3">
+          <div className="mt-6 flex items-center justify-center gap-[3px]">
             {items.map((_, i) => (
               <button
                 key={i}
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => goTo(i)}
                 className={`h-2 w-2 rounded-full transition-all ${
-                  index === i ? "bg-dark-100 w-6" : "bg-dark-100/40"
+                  index === i ? "bg-black" : "bg-black !h-[1px]"
                 }`}
               />
             ))}

@@ -39,33 +39,17 @@
           "type": "StructuredText",
           "config": { "label": "Middle column title", "single": "paragraph" }
         },
-        "middle_list": {
-          "type": "Group",
-          "config": {
-            "label": "Middle bullet points",
-            "fields": {
-              "item": {
-                "type": "StructuredText",
-                "config": { "label": "Item", "single": "paragraph" }
-              }
-            }
-          }
+        "middle_body": {
+          "type": "StructuredText",
+          "config": { "label": "Middle column body", "multi": "paragraph" }
         },
         "right_title": {
           "type": "StructuredText",
           "config": { "label": "Right column title", "single": "paragraph" }
         },
-        "right_list": {
-          "type": "Group",
-          "config": {
-            "label": "Right bullet points",
-            "fields": {
-              "item": {
-                "type": "StructuredText",
-                "config": { "label": "Item", "single": "paragraph" }
-              }
-            }
-          }
+        "right_body": {
+          "type": "StructuredText",
+          "config": { "label": "Right column body", "multi": "paragraph" }
         }
       },
       "items": {}

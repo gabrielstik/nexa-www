@@ -9,7 +9,7 @@ export default function UseCase({ slice }) {
   const { primary } = slice;
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-[#EDE8DF]">
       <div className="mx-auto max-w-6xl px-6">
         {primary.overline?.length ? (
           <div className="mb-6 text-center">
@@ -17,9 +17,7 @@ export default function UseCase({ slice }) {
               field={primary.overline}
               components={{
                 paragraph: ({ children }) => (
-                  <h3 className={twMerge(h3ClassName, "text-[#23261B]/80")}>
-                    {children}
-                  </h3>
+                  <h3 className={twMerge(h3ClassName, "pb-6")}>{children}</h3>
                 ),
               }}
             />
@@ -27,10 +25,10 @@ export default function UseCase({ slice }) {
         ) : null}
 
         {primary.image?.url ? (
-          <div className="rounded-[10px] overflow-hidden">
+          <div className="rounded-[10px] overflow-hidden aspect-[16/9]">
             <PrismicNextImage
               field={primary.image}
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
               alt=""
             />
           </div>
@@ -49,16 +47,24 @@ export default function UseCase({ slice }) {
 
         <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <PrismicRichText
-              field={primary.left_title}
-              components={{
-                paragraph: ({ children }) => (
-                  <h4 className="font-free font-[700] text-[14px] uppercase text-[#232518] mb-3">
-                    {children}
-                  </h4>
-                ),
-              }}
-            />
+            <div className="flex">
+              <PrismicRichText
+                field={primary.left_title}
+                components={{
+                  paragraph: ({ children }) => (
+                    <h4
+                      className={twMerge(
+                        h3ClassName,
+                        "text-white mb-3",
+                        "bg-[#232518] px-4 py-1 rounded-full"
+                      )}
+                    >
+                      {children}
+                    </h4>
+                  ),
+                }}
+              />
+            </div>
             <PrismicRichText
               field={primary.left_body}
               components={{
@@ -70,59 +76,61 @@ export default function UseCase({ slice }) {
           </div>
 
           <div>
+            <div className="flex">
+              <PrismicRichText
+                field={primary.middle_title}
+                components={{
+                  paragraph: ({ children }) => (
+                    <h4
+                      className={twMerge(
+                        h3ClassName,
+                        "text-white mb-3",
+                        "bg-[#232518] px-4 py-1 rounded-full"
+                      )}
+                    >
+                      {children}
+                    </h4>
+                  ),
+                }}
+              />
+            </div>
             <PrismicRichText
-              field={primary.middle_title}
+              field={primary.middle_body}
               components={{
                 paragraph: ({ children }) => (
-                  <h4 className="font-free font-[700] text-[14px] uppercase text-[#232518] mb-3">
-                    {children}
-                  </h4>
+                  <p className={p1ClassName}>{children}</p>
                 ),
               }}
             />
-            <ul className="space-y-2">
-              {primary.middle_list?.map?.((row, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="mt-[6px] block h-1.5 w-1.5 rounded-full bg-[#232518]" />
-                  <PrismicRichText
-                    field={row.item}
-                    components={{
-                      paragraph: ({ children }) => (
-                        <p className={p1ClassName}>{children}</p>
-                      ),
-                    }}
-                  />
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>
+            <div className="flex">
+              <PrismicRichText
+                field={primary.right_title}
+                components={{
+                  paragraph: ({ children }) => (
+                    <h4
+                      className={twMerge(
+                        h3ClassName,
+                        "text-white mb-3",
+                        "bg-[#232518] px-4 py-1 rounded-full"
+                      )}
+                    >
+                      {children}
+                    </h4>
+                  ),
+                }}
+              />
+            </div>
             <PrismicRichText
-              field={primary.right_title}
+              field={primary.right_body}
               components={{
                 paragraph: ({ children }) => (
-                  <h4 className="font-free font-[700] text-[14px] uppercase text-[#232518] mb-3">
-                    {children}
-                  </h4>
+                  <p className={p1ClassName}>{children}</p>
                 ),
               }}
             />
-            <ul className="space-y-2">
-              {primary.right_list?.map?.((row, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="mt-[6px] block h-1.5 w-1.5 rounded-full bg-[#232518]" />
-                  <PrismicRichText
-                    field={row.item}
-                    components={{
-                      paragraph: ({ children }) => (
-                        <p className={p1ClassName}>{children}</p>
-                      ),
-                    }}
-                  />
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>

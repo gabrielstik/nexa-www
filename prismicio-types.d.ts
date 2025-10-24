@@ -143,7 +143,81 @@ export type PageHomeDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = PageHomeDocument;
+type PageSectorDocumentDataSlicesSlice =
+  | CtaBannerSlice
+  | TestimonialsSlice
+  | BlogCarouselSlice
+  | AboutIntroSlice
+  | FaqSlice
+  | ServicesGridSlice
+  | ExpertiseListSlice
+  | FeatureCardsSlice
+  | HeroSlice;
+
+/**
+ * Content for Sector Page documents
+ */
+interface PageSectorDocumentData {
+  /**
+   * Slice Zone field in *Sector Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page_sector.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<PageSectorDocumentDataSlicesSlice> /**
+   * Meta Title field in *Sector Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page_sector.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Sector Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: page_sector.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Sector Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page_sector.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Sector Page document from Prismic
+ *
+ * - **API ID**: `page_sector`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageSectorDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<PageSectorDocumentData>,
+    "page_sector",
+    Lang
+  >;
+
+export type AllDocumentTypes = PageHomeDocument | PageSectorDocument;
 
 /**
  * Primary content in *AboutIntro → Default → Primary*
@@ -1027,6 +1101,9 @@ declare module "@prismicio/client" {
       PageHomeDocument,
       PageHomeDocumentData,
       PageHomeDocumentDataSlicesSlice,
+      PageSectorDocument,
+      PageSectorDocumentData,
+      PageSectorDocumentDataSlicesSlice,
       AllDocumentTypes,
       AboutIntroSlice,
       AboutIntroSliceDefaultPrimary,

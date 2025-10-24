@@ -8,7 +8,7 @@ export default function Hero({ slice }) {
   const { primary, items } = slice;
 
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate overflow-hidden pt-[80px]">
       {primary.background_image?.url ? (
         <div className="absolute inset-0 -z-10">
           <PrismicNextImage

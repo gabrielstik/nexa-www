@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
       >
+        <Header />
         {children}
         <Footer />
       </body>

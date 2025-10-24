@@ -90,7 +90,7 @@ export default function AboutIntro({ slice }) {
             {primary.secondary_image?.url ? (
               <PrismicNextImage
                 field={primary.secondary_image}
-                className="w-full rounded-[4px]"
+                className="w-full h-full object-cover rounded-[4px]"
                 alt=""
               />
             ) : null}

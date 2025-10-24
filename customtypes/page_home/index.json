@@ -35,6 +35,9 @@
             "feature_cards": {
               "type": "SharedSlice"
             },
+            "use_case": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             }

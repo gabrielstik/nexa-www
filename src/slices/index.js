@@ -10,6 +10,7 @@ export const components = {
   faq: dynamic(() => import("./Faq")),
   feature_cards: dynamic(() => import("./FeatureCards")),
   hero: dynamic(() => import("./Hero")),
+  use_case: dynamic(() => import("./UseCase")),
   services_grid: dynamic(() => import("./ServicesGrid")),
   testimonials: dynamic(() => import("./Testimonials")),
 };

@@ -1,0 +1,74 @@
+{
+  "id": "use_case",
+  "type": "SharedSlice",
+  "name": "UseCase",
+  "description": "Case study section with image, title and three columns",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "overline": {
+          "type": "StructuredText",
+          "config": { "label": "Overline", "single": "paragraph" }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero image",
+            "constraint": { "width": null, "height": null },
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": { "label": "Title", "single": "paragraph" }
+        },
+        "left_title": {
+          "type": "StructuredText",
+          "config": { "label": "Left column title", "single": "paragraph" }
+        },
+        "left_body": {
+          "type": "StructuredText",
+          "config": { "label": "Left column body", "multi": "paragraph" }
+        },
+        "middle_title": {
+          "type": "StructuredText",
+          "config": { "label": "Middle column title", "single": "paragraph" }
+        },
+        "middle_list": {
+          "type": "Group",
+          "config": {
+            "label": "Middle bullet points",
+            "fields": {
+              "item": {
+                "type": "StructuredText",
+                "config": { "label": "Item", "single": "paragraph" }
+              }
+            }
+          }
+        },
+        "right_title": {
+          "type": "StructuredText",
+          "config": { "label": "Right column title", "single": "paragraph" }
+        },
+        "right_list": {
+          "type": "Group",
+          "config": {
+            "label": "Right bullet points",
+            "fields": {
+              "item": {
+                "type": "StructuredText",
+                "config": { "label": "Item", "single": "paragraph" }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

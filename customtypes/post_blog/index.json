@@ -34,6 +34,9 @@
             },
             "cta_banner": {
               "type": "SharedSlice"
+            },
+            "post_wysiwyg": {
+              "type": "SharedSlice"
             }
           }
         }

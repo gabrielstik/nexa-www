@@ -300,7 +300,8 @@ type PostBlogDocumentDataSlicesSlice =
   | AboutIntroSlice
   | BlogPostsSlice
   | HeroSlice
-  | CtaBannerSlice;
+  | CtaBannerSlice
+  | PostWysiwygSlice;
 
 /**
  * Content for Blog post documents
@@ -1074,6 +1075,51 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *PostWysiwyg → Default → Primary*
+ */
+export interface PostWysiwygSliceDefaultPrimary {
+  /**
+   * Content field in *PostWysiwyg → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post_wysiwyg.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PostWysiwyg Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PostWysiwygSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PostWysiwygSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PostWysiwyg*
+ */
+type PostWysiwygSliceVariation = PostWysiwygSliceDefault;
+
+/**
+ * PostWysiwyg Shared Slice
+ *
+ * - **API ID**: `post_wysiwyg`
+ * - **Description**: Simple WYSIWYG content for blog posts
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PostWysiwygSlice = prismic.SharedSlice<
+  "post_wysiwyg",
+  PostWysiwygSliceVariation
+>;
+
+/**
  * Primary content in *ServicesGrid → Default → Primary*
  */
 export interface ServicesGridSliceDefaultPrimary {
@@ -1454,6 +1500,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultItem,
       HeroSliceVariation,
       HeroSliceDefault,
+      PostWysiwygSlice,
+      PostWysiwygSliceDefaultPrimary,
+      PostWysiwygSliceVariation,
+      PostWysiwygSliceDefault,
       ServicesGridSlice,
       ServicesGridSliceDefaultPrimary,
       ServicesGridSliceDefaultItem,

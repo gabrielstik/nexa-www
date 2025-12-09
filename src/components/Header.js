@@ -77,9 +77,12 @@ export default function Header() {
                 </ul>
               </div>
             </div>
-            <button className="rounded-md bg-black/60 text-white px-5 py-3 text-sm font-medium hover:bg-black/70 transition-colors">
+            <Link
+              href="/blog"
+              className="rounded-md bg-black/60 text-white px-5 py-3 text-sm font-medium hover:bg-black/70 transition-colors"
+            >
               Blog
-            </button>
+            </Link>
           </nav>
 
           <div className="flex items-center col-span-1 justify-end">

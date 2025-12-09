@@ -14,4 +14,5 @@ export const components = {
   services_grid: dynamic(() => import("./ServicesGrid")),
   testimonials: dynamic(() => import("./Testimonials")),
   use_case: dynamic(() => import("./UseCase")),
+  post_wysiwyg: dynamic(() => import("./PostWysiwyg")),
 };

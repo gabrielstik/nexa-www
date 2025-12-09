@@ -1,0 +1,26 @@
+{
+  "id": "post_wysiwyg",
+  "type": "SharedSlice",
+  "name": "PostWysiwyg",
+  "description": "Simple WYSIWYG content for blog posts",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0.0",
+      "description": "",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "multi": "paragraph,heading1,heading2,heading3,preformatted,strong,em,hyperlink,image,embed"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ export const repositoryName = config.repositoryName;
 export const routes = [
   { type: "page_home", path: "/" },
   { type: "page_sector", path: "/:uid" },
+  { type: "post_blog", path: "/blog/:uid" },
 ];
 
 export function createClient(options = {}) {

@@ -5,12 +5,13 @@ import dynamic from "next/dynamic";
 export const components = {
   about_intro: dynamic(() => import("./AboutIntro")),
   blog_carousel: dynamic(() => import("./BlogCarousel")),
+  blog_posts: dynamic(() => import("./BlogPosts")),
   cta_banner: dynamic(() => import("./CtaBanner")),
   expertise_list: dynamic(() => import("./ExpertiseList")),
   faq: dynamic(() => import("./Faq")),
   feature_cards: dynamic(() => import("./FeatureCards")),
   hero: dynamic(() => import("./Hero")),
-  use_case: dynamic(() => import("./UseCase")),
   services_grid: dynamic(() => import("./ServicesGrid")),
   testimonials: dynamic(() => import("./Testimonials")),
+  use_case: dynamic(() => import("./UseCase")),
 };
